@@ -32,7 +32,7 @@ function operacionDeCambio(nombreMoneda1, funcionDeConversion ,comision, nombreM
   do {
     let entrada = prompt("Ingrese un monto:");
     if (entrada === null) {
-      recargarPagina(`Hasta pronto!`);
+      recargarPagina("Operacion cancelada");
       return;
     }
     monto = Number(entrada);
@@ -64,8 +64,8 @@ let decision1;
 do {
 decision1 = prompt(
     `Que quiere hacer:
-    1) Comprar desde dolar a crypto
-    2) Comprar desde crypto a dolar`,
+    1) Comprar desde USD a crypto
+    2) Comprar desde crypto a USD`,
     " Ej: 1 "
   )
 ;
@@ -95,15 +95,15 @@ if (decision1 === 1) {
   
   switch (decisionDolar_crypto) {
     case 1: 
-    operacionDeCambio("Dolar", (monto) => dolar_divisas(monto, divisas[0].valor), comisionDolar, divisas[0].name);
+    operacionDeCambio("USD", (monto) => dolar_divisas(monto, divisas[0].valor), comisionDolar, divisas[0].name);
     break;
 
     case 2: 
-    operacionDeCambio("Dolar", (monto) => dolar_divisas(monto, divisas[1].valor), comisionDolar, divisas[1].name);
+    operacionDeCambio("USD", (monto) => dolar_divisas(monto, divisas[1].valor), comisionDolar, divisas[1].name);
     break;
 
     case 3: 
-    operacionDeCambio("Dolar", (monto) => dolar_divisas(monto, divisas[2].valor), comisionDolar, divisas[2].name);
+    operacionDeCambio("USD", (monto) => dolar_divisas(monto, divisas[2].valor), comisionDolar, divisas[2].name);
     break;
   }
   } else {
@@ -124,15 +124,15 @@ if (decision1 === 1) {
   
   switch (decisionCrypto_Dolar) {
     case 1: 
-    operacionDeCambio(divisas[0].name, (monto) => divisas_dolar(monto, divisas[0].valor), comisionDivisas, "Dolar");
+    operacionDeCambio(divisas[0].name, (monto) => divisas_dolar(monto, divisas[0].valor), comisionDivisas, "USD");
     break;
 
     case 2: 
-    operacionDeCambio(divisas[1].name, (monto) => divisas_dolar(monto, divisas[1].valor), comisionDivisas, "Dolar");
+    operacionDeCambio(divisas[1].name, (monto) => divisas_dolar(monto, divisas[1].valor), comisionDivisas, "USD");
     break;
 
     case 3: 
-    operacionDeCambio(divisas[2].name, (monto) => divisas_dolar(monto, divisas[2].valor), comisionDivisas, "Dolar");
+    operacionDeCambio(divisas[2].name, (monto) => divisas_dolar(monto, divisas[2].valor), comisionDivisas, "USD");
     break;
   }
   }

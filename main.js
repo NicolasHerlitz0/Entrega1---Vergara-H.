@@ -56,8 +56,8 @@ function operacionDeCambio(nombreMoneda1, funcionDeConversion ,comision, nombreM
 // inicio de programa
 const primerPaso = alert(
   `Bienvenido a la casa de cambio. 
-Nuestra comisión para convertir dólar a BTC es del 1.5%. 
-Para convertir BTC a dólar es del 3%.`
+Nuestra comisión para convertir dólar a crypto es del 1.5%. 
+Para convertir crypto a dólar es del 3%.`
 );
 
 let decision1;
